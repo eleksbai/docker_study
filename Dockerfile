@@ -2,10 +2,10 @@
 FROM python:2.7-slim
 
 # Set the working directory to /app
-WORKDIR /app
+WORKDIR /docker_study
 
 # Copy the current directory contents into the container at /app
-ADD . /app
+ADD . /docker_study
 
 # Install any needed packages specified in requirements.txt
 RUN pip install --trusted-host pypi.python.org -r requirements.txt
@@ -16,5 +16,5 @@ EXPOSE 5000
 # Define environment variable
 ENV NAME World
 
-# Run app.py when the container launches
-CMD ["python", "app.py"]
+# Run docker_study.py when the container launches
+CMD ["python", "docker_study.py"]
