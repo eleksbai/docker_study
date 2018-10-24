@@ -1,5 +1,5 @@
 # Use an official Python runtime as a parent image
-FROM markadams/chromium-xvfb-py3
+FROM python:3.6-alpine
 
 # Set the working directory to /app
 WORKDIR /docker_study
@@ -17,4 +17,4 @@ EXPOSE 5000
 ENV NAME World
 
 # Run docker_study.py when the container launches
-CMD ["python3", "docker_study.py"]
+CMD ["python", "docker_study.py"]
